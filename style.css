@@ -1,0 +1,120 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-white: #fff;
+    --text-gray: #646161;
+}
+
+.e-center {
+    text-align: center;
+}
+
+html {
+    line-height: 20px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#wrapper {
+    background-image: linear-gradient(0, rgba(80, 207, 29, 0.932), rgb(75 237 98 / 92%));
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.content-session {
+    max-width: 600px;
+    padding: 34px 0;
+    margin: auto;
+}
+
+.content-session__img-box {
+    margin: auto;
+    height: 96px;
+    width: 96px;
+}
+
+.content-session__img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.content-session__intro {
+    color: var(--text-white);
+    margin: 16px 0;
+}
+
+.intro__name {
+    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.intro__desc {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.content-session__link-list {
+    padding: 0 16px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.content-session__link-item {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.content-session__link-box {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: rgba(255, 255, 255, .7);
+    display: block;
+    position: relative;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.content-session__link-box:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.content-icon {
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    font-size: 34px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.content-title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
