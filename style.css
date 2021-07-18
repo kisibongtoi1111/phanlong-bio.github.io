@@ -22,28 +22,18 @@ html {
 }
 
 body {
+    overflow: hidden;
     height: 100%;
     width: 100%;
-    overflow: hidden;
-}
-
-#big-slider {
-    position: relative;
-    width: 200%;
-    height: 100%;
-    display: flex;
-    animation: truckgoin 3s linear forwards;
-    -webkit-animation: truckgoin 3s linear forwards;
 }
 
 .item {
-    width: 50%;
-    height: 100%;
+    flex: 1;
 }
 
 .wrapper {
-    overflow: hidden;
-    left: -100%;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-position: center;
     background-repeat: no-repeat;
@@ -53,6 +43,8 @@ body {
 }
 
 .content-session {
+    position: relative;
+    /* overflow: hidden; */
     max-width: 600px;
     padding: 34px 0;
     margin: auto;
@@ -174,6 +166,8 @@ body {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    animation: opacitynone 1s 5s forwards;
+    -webkit-animation: opacitynone 1s 5s forwards;
 }
 
 @keyframes truckgoin {
@@ -185,4 +179,21 @@ body {
     }
 }
 
+@keyframes opacitynone {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
+#big-slider {
+    position: relative;
+    left: -202%;
+    height: 100%;
+    width: 200%;
+    display: flex;
+    animation: truckgoin 5s linear;
+    -webkit-animation: truckgoin 5s linear forwards;
+}
