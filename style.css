@@ -24,16 +24,30 @@ html {
 body {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
-
-#wrapper {
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+#big-slider {
+    position: relative;
+    width: 200%;
     height: 100%;
+    display: flex;
+    animation: truckgoin 3s linear forwards;
+    -webkit-animation: truckgoin 3s linear forwards;
+}
+
+.item {
+    width: 50%;
+    height: 100%;
+}
+
+.wrapper {
+    overflow: hidden;
+    left: -100%;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 400% 400%;
-    width: 100%;
     animation: Gradient 15s ease infinite;
     -webkit-animation: Gradient 15s ease infinite;
 }
@@ -143,3 +157,32 @@ body {
 		background-position: 0% 50%
 	}
 }
+
+.slider-animation {
+    position: relative;
+}
+
+.slider-animation img {
+    position: absolute;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@keyframes truckgoin {
+    from {
+        left: -158%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+
