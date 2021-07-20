@@ -33,7 +33,6 @@ body {
 
 #wrapper {
     overflow: hidden;
-/* 	new thing	 */
     background: linear-gradient(-45deg, #00af66, #57c1a0, #007a5a, #61c687);
     height: 100%;
     background-position: center;
