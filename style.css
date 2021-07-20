@@ -33,7 +33,7 @@ body {
 
 #wrapper {
     overflow: hidden;
-    background: linear-gradient(-45deg, #00af66, #57c1a0, #007a5a, #61c687);
+    background: linear-gradient(-45deg, #00af66, #5dce83, #007a33, #61c687);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,7 +41,6 @@ body {
     width: 100%;
     animation: Gradient 15s ease infinite;
     -webkit-animation: Gradient 15s ease infinite;
-
     position: relative;
 }
 
