@@ -121,6 +121,7 @@ body {
 }
 
 .truck-wrapper {
+    width: 999px;
     position: absolute;
     left: 100%;
     top: 209px;
