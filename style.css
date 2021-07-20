@@ -8,6 +8,9 @@
 :root {
     --text-white: #fff;
     --text-gray: #646161;
+
+    --list-pos: 0;
+    --truck-pos: -999px;
 }
 
 .e-center {
@@ -30,7 +33,6 @@ body {
 
 #wrapper {
     overflow: hidden;
-    position: relative;
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     height: 100%;
     background-position: center;
@@ -39,6 +41,8 @@ body {
     width: 100%;
     animation: Gradient 15s ease infinite;
     -webkit-animation: Gradient 15s ease infinite;
+
+    position: relative;
 }
 
 .content-session {
@@ -80,24 +84,20 @@ body {
 }
 
 .content-session__link-list {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 214px;
     padding: 0 16px;
     display: flex;
     flex-flow: column wrap;
-    transform: translateX(200%);
-    -webkit-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -o-transform: translateX(200%);
-    animation: listfadein 2s 2s ease forwards;
-    -webkit-animation: listfadein 2s 2s ease forwards;
+    position: absolute;
+    max-width: 600px;
+    width: 100%;
+    left: calc( -1 * var(--truck-pos) + 100%);
+    right: 0;
+    margin: auto;
+    animation:listfadein 2s 2s ease forwards;
+    -webkit-animation:listfadein 2s 2s ease forwards;
 }
 
 .content-session__link-item {
-    min-width: 200px;
     margin: 10px 0;
     list-style: none;
 }
@@ -118,6 +118,23 @@ body {
 
 .content-session__link-box:hover {
     background-color: rgba(255, 255, 255, 1);
+}
+
+.truck-wrapper {
+    position: absolute;
+    left: 100%;
+    top: 209px;
+    right: 0;
+    animation: truckfadein 2s 2s ease forwards;
+    -webkit-animation: truckfadein 2s 2s ease forwards;
+}
+
+.truck-img {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
 }
 
 .content-icon {
@@ -229,56 +246,16 @@ body {
     }
 }
 
-.truck-animation {
-    position: absolute;
-    left: 0;
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    animation: truckfadein 2s 2s ease forwards;
-    -webkit-animation: truckfadein 2s 2s ease forwards;
-}
-
-.truck-img {
-    width: 100%;
-    transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-}
-
 @keyframes listfadein {
     to {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
+        left: var(--list-pos);
     }
 }
 
 @keyframes truckfadein {
     to {
-        transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        -moz-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        -o-transform: translateX(-100%);
+        left: var(--truck-pos);
     }
-}
-
-/* responsive */
-/* PC */
-@media only screen and (min-width: 64em) {
-
-}
-
-/* Tablet */
-@media (min-width: 46.25em) and (max-width: 63.9375em) {
-    
 }
 
 /* Mobile */
